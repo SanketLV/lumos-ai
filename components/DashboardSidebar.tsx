@@ -9,21 +9,20 @@ import {
 } from "@tabler/icons-react";
 import Link from "next/link";
 import { motion } from "motion/react";
-import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-export function SidebarDemo({ children }: { children: React.ReactNode }) {
+export function DashboardSidebar() {
   const links = [
     {
       label: "Dashboard",
-      href: "#",
+      href: "/upload",
       icon: (
         <IconBrandTabler className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
       ),
     },
     {
       label: "Profile",
-      href: "#",
+      href: "/profile",
       icon: (
         <IconUserBolt className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
       ),
@@ -35,19 +34,19 @@ export function SidebarDemo({ children }: { children: React.ReactNode }) {
         <IconSettings className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
       ),
     },
-    {
-      label: "Logout",
-      href: "#",
-      icon: (
-        <IconArrowLeft className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
-      ),
-    },
+    // {
+    //   label: "Logout",
+    //   href: "#",
+    //   icon: (
+    //     <IconArrowLeft className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
+    //   ),
+    // },
   ];
   const [open, setOpen] = useState(false);
   return (
     <div
       className={cn(
-        " flex w-full flex-1 flex-col overflow-hidden rounded-md border border-neutral-200 bg-gray-100 md:flex-row dark:border-neutral-700 dark:bg-neutral-800",
+        "flex w-full max-w-fit flex-col overflow-hidden rounded-md border border-neutral-200 bg-gray-100 md:flex-row dark:border-neutral-700 dark:bg-neutral-800",
         "h-screen" // for your use case, use `h-screen` instead of `h-[60vh]`
       )}
     >
@@ -62,7 +61,7 @@ export function SidebarDemo({ children }: { children: React.ReactNode }) {
             </div>
           </div>
           <div>
-            <SidebarLink
+            {/* <SidebarLink
               link={{
                 label: "Sanket Lakhani",
                 href: "#",
@@ -76,11 +75,11 @@ export function SidebarDemo({ children }: { children: React.ReactNode }) {
                   />
                 ),
               }}
-            />
+            /> */}
           </div>
         </SidebarBody>
       </Sidebar>
-      {children}
+      {/* {children} */}
     </div>
   );
 }

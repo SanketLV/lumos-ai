@@ -3,7 +3,6 @@ import { LampContainer } from "./ui/lamp";
 import { motion } from "motion/react";
 import { Button } from "./ui/button";
 import Link from "next/link";
-import { HoverBorderGradient } from "./ui/hover-border-gradient";
 
 const Hero = () => {
   return (
@@ -45,18 +44,12 @@ const Hero = () => {
       >
         <Link href={"/login"}>
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            {/* <HoverBorderGradient
-            containerClassName="rounded-full"
-            as="button"
-            className="dark:bg-black bg-transparent text-black dark:text-white flex items-center space-x-2"
-          > */}
             <Button
               className="mt-10 bg-white text-black hover:bg-slate-300"
               size={"lg"}
             >
               Get Started
             </Button>
-            {/* </HoverBorderGradient> */}
           </motion.div>
         </Link>
         <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
